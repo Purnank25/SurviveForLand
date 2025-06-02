@@ -4,7 +4,7 @@ public class Enemy : MonoBehaviour
 {
     private Rigidbody enemyRb;
     private GameObject player;
-    public float speed = 3.0f;
+    public float speed = 2.0f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
