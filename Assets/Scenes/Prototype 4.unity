@@ -212,6 +212,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PowerupIndicator
       objectReference: {fileID: 0}
+    - target: {fileID: 1742899641471652, guid: 923deea38dc6a8843b15db7638919c1e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4428908044626120, guid: 923deea38dc6a8843b15db7638919c1e, type: 3}
       propertyPath: m_LocalScale.x
       value: 4
@@ -269,6 +273,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 923deea38dc6a8843b15db7638919c1e, type: 3}
+--- !u!1 &676045547 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1742899641471652, guid: 923deea38dc6a8843b15db7638919c1e, type: 3}
+  m_PrefabInstance: {fileID: 645683853}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1013353006
 GameObject:
   m_ObjectHideFlags: 0
@@ -419,6 +428,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  powerupIndicator: {fileID: 676045547}
 --- !u!1 &1178777898
 GameObject:
   m_ObjectHideFlags: 0
@@ -856,6 +866,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 5585822892906218521, guid: d16540322feb8a64792d205d45061448, type: 3}
+  powerupPrefab: {fileID: 2379066361631924567, guid: a2cbfdd7493c7ed4b8535041b170c8ed, type: 3}
   spwanRange: 9
 --- !u!4 &1803734846
 Transform:
@@ -883,6 +894,10 @@ PrefabInstance:
     - target: {fileID: 2379066361631924567, guid: a2cbfdd7493c7ed4b8535041b170c8ed, type: 3}
       propertyPath: m_Name
       value: PowerUp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2379066361631924567, guid: a2cbfdd7493c7ed4b8535041b170c8ed, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4888989972423990747, guid: a2cbfdd7493c7ed4b8535041b170c8ed, type: 3}
       propertyPath: m_LocalPosition.x
