@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class PlayerController : MonoBehaviour
 {
@@ -28,6 +29,11 @@ public class PlayerController : MonoBehaviour
             Destroy(other.gameObject);
         }
     }
+    IEnumerator PowerupCountDownRoutine()
+    {
+        yield return new WaitForSeconds(7);
+        hasPowerup = false;
+    }
     private void OnCollisionEnter(Collision collision)
     {
         if (hasPowerup && collision.gameObject.CompareTag("Enemy"))
@@ -35,6 +41,7 @@ public class PlayerController : MonoBehaviour
             Rigidbody enemyRigidBody = collision.gameObject.GetComponent<Rigidbody>();
             Vector3 awayFromPlayer = enemyRigidBody.transform.position - transform.position;
             enemyRigidBody.AddForce(awayFromPlayer * powerStrength, ForceMode.Impulse);
+            StartCoroutine(PowerupCountDownRoutine());
         }
     }
 }
